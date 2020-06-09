@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<!-- CSS Saya-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type= "text/JavaScript" src="assets/vue.js"></script>
+<!-- Selesai CSS saya -->
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-content>
+        <v-container>
+        <!-- Navbar -->
+        <nav>
+            <v-toolbar flat app>
+              <v-toolbar-side-icon></v-toolbar-side-icon> 
+              </v-toolbar-tittle>
+                <span class="font-weight-light">Rizky</span>
+                <span>Wira</span>
+              </v-toolbar-tittle>
+              <p class="text-center">Tel-U</p>
+              <v-spacer></v-spacer>
+              <v-btn href="designui.html"flat color="white">
+                <span>UI Design</span>
+              </v-btn>
+              <v-btn href="tentangsaya.html" flat color="white">
+                <span>About Me</span>
+              </v-btn>
+            </v-toolbar>
+          </nav>
+      </v-container>
+        <!-- Akhir Navbar -->
+        <div class="container">
+        <p class="blue-grey lighten-4 font-weight-medium text-center">This is my Album Portfolio using Camera Analog 'Canon FTb' </p>
+            <div class="row">
+                <div class="col-4">
+                    <template>
+                        <v-card
+                        :loading="loading"
+                        class="mx-auto my-12"
+                        max-width="374"
+                        >
+                        <v-img
+                            height="250"
+                            src="img/logoIF.jpg"
+                        ></v-img>
+                    
+                        <v-card-title>Logo HIMA IF</v-card-title>
+                    
+                        <v-card-text>
+                            <v-row
+                            align="center"
+                            class="mx-0"
+                            >
+                            <v-rating
+                                :value="4.5"
+                                color="amber"
+                                dense
+                                half-increments
+                                readonly
+                                size="14"
+                            ></v-rating>
+                    
+                            <div class="grey--text ml-4">4.5 (413)</div>
+                            </v-row>
+                    
+                            <div class="my-4 subtitle-1">
+                                • Telkom University, Bandung 
+                            </div>
+                    
+                            <div>Salah satu logo himpunan di Telkom University, situasi saat arak-arakan wisuda November 2019.</div>
+                        </v-card-text>
+                    
+                        <v-divider class="mx-4"></v-divider>
+                    
+                        <v-card-title>Berikan rating untuk foto ini</v-card-title>
+                    
+                        <v-card-text>
+                            <v-chip-group
+                            v-model="selection"
+                            active-class="deep-purple accent-4 white--text"
+                            column
+                            >
+                            <v-chip>Bintang 1</v-chip>
+                    
+                            <v-chip>Bintang 2</v-chip>
+                    
+                            <v-chip>Bintang 3</v-chip>
+                    
+                            <v-chip>Bintang 4</v-chip>
+
+                            <v-chip>Bintang 5</v-chip>
+                            </v-chip-group>
+                        </v-card-text>
+                    
+                        <v-card-actions>
+                            <v-btn
+                            color="deep-purple lighten-2"
+                            text
+                            @click="reserve"
+                            >
+                            Lihat Lokasi
+                            </v-btn>
+                        </v-card-actions>
+                        </v-card>
+                    </template>
+                </div>
+                <div class="col-4">
+                    <template>
+                        <v-card
+                        :loading="loading"
+                        class="mx-auto my-12"
+                        max-width="374"
+                        >
+                        <v-img
+                            height="250"
+                            src="img/becak2.jpg"
+                        ></v-img>
+                    
+                        <v-card-title>Becak Pasar Baru</v-card-title>
+                    
+                        <v-card-text>
+                            <v-row
+                            align="center"
+                            class="mx-0"
+                            >
+                            <v-rating
+                                :value="5"
+                                color="amber"
+                                dense
+                                half-increments
+                                readonly
+                                size="14"
+                            ></v-rating>
+                    
+                            <div class="grey--text ml-4">5 (133)</div>
+                            </v-row>
+                    
+                            <div class="my-4 subtitle-1">
+                                • Pasar Baru, Bandung
+                            </div>
+                    
+                            <div>Salah satu pangkalan becak yang berada di Pasar Baru, Bandung, Jawa Barat.</div>
+                        </v-card-text>
+                    
+                        <v-divider class="mx-4"></v-divider>
+                    
+                        <v-card-title>Berikan rating untuk foto ini</v-card-title>
+                    
+                        <v-card-text>
+                            <v-chip-group
+                            v-model="selection"
+                            active-class="deep-purple accent-4 white--text"
+                            column
+                            >
+                            <v-chip>Bintang 1</v-chip>
+                    
+                            <v-chip>Bintang 2</v-chip>
+                    
+                            <v-chip>Bintang 3</v-chip>
+                    
+                            <v-chip>Bintang 4</v-chip>
+
+                            <v-chip>Bintang 5</v-chip>
+                            </v-chip-group>
+                        </v-card-text>
+                    
+                        <v-card-actions>
+                            <v-btn
+                            color="deep-purple lighten-2"
+                            text
+                            @click="reserve"
+                            >
+                            Lihat Lokasi
+                            </v-btn>
+                        </v-card-actions>
+                        </v-card>
+                    </template>
+                </div>
+                <div class="col-4">
+                    <template>
+                        <v-card
+                        :loading="loading"
+                        class="mx-auto my-12"
+                        max-width="374"
+                        >
+                        <v-img
+                            height="250"
+                            src="img/parkir.jpg"
+                        ></v-img>
+                    
+                        <v-card-title>Tukang Parkir</v-card-title>
+                    
+                        <v-card-text>
+                            <v-row
+                            align="center"
+                            class="mx-0"
+                            >
+                            <v-rating
+                                :value="5"
+                                color="amber"
+                                dense
+                                half-increments
+                                readonly
+                                size="14"
+                            ></v-rating>
+                    
+                            <div class="grey--text ml-4">5 (800)</div>
+                            </v-row>
+                    
+                            <div class="my-4 subtitle-1">
+                            $ • Pasar Baru, Bandung
+                            </div>
+                    
+                            <div>Salah satu tukang parkir didaerah Pasar Baru, tepatnya berada di Pasar Baru Trade Center.</div>
+                        </v-card-text>
+                    
+                        <v-divider class="mx-4"></v-divider>
+                    
+                        <v-card-title>Berikan rating untuk foto ini</v-card-title>
+                    
+                        <v-card-text>
+                            <v-chip-group
+                            v-model="selection"
+                            active-class="deep-purple accent-4 white--text"
+                            column
+                            >
+                            <v-chip>Bintang 1</v-chip>
+                    
+                            <v-chip>Bintang 2</v-chip>
+                    
+                            <v-chip>Bintang 3</v-chip>
+                    
+                            <v-chip>Bintang 4</v-chip>
+
+                            <v-chip>Bintang 5</v-chip>
+                            </v-chip-group>
+                        </v-card-text>
+                    
+                        <v-card-actions>
+                            <v-btn
+                            color="deep-purple lighten-2"
+                            text
+                            @click="reserve"
+                            >
+                            Lihat Lokasi
+                            </v-btn>
+                        </v-card-actions>
+                        </v-card>
+                    </template>
+                    
+                </div>
+                <div class="col-4">
+                    <template>
+                        <v-card
+                        :loading="loading"
+                        class="mx-auto my-12"
+                        max-width="374"
+                        >
+                        <v-img
+                            height="250"
+                            src="img/memilih.jpg"
+                        ></v-img>
+                    
+                        <v-card-title>Pembeli di Salah satu toko</v-card-title>
+                    
+                        <v-card-text>
+                            <v-row
+                            align="center"
+                            class="mx-0"
+                            >
+                            <v-rating
+                                :value="3.5"
+                                color="amber"
+                                dense
+                                half-increments
+                                readonly
+                                size="14"
+                            ></v-rating>
+                    
+                            <div class="grey--text ml-4">3.5 (112)</div>
+                            </v-row>
+                    
+                            <div class="my-4 subtitle-1">
+                                • Pasar Baru, Bandung
+                            </div>
+                    
+                            <div>Salah satu pembeli yang hendak membeli sendal di salah satu sudut Pasar Baru.</div>
+                        </v-card-text>
+                    
+                        <v-divider class="mx-4"></v-divider>
+                    
+                        <v-card-title>Berikan rating untuk foto ini</v-card-title>
+                    
+                        <v-card-text>
+                            <v-chip-group
+                            v-model="selection"
+                            active-class="deep-purple accent-4 white--text"
+                            column
+                            >
+                            <v-chip>Bintang 1</v-chip>
+                    
+                            <v-chip>Bintang 2</v-chip>
+                    
+                            <v-chip>Bintang 3</v-chip>
+                    
+                            <v-chip>Bintang 4</v-chip>
+
+                            <v-chip>Bintang 5</v-chip>
+                            </v-chip-group>
+                        </v-card-text>
+                    
+                        <v-card-actions>
+                            <v-btn
+                            color="deep-purple lighten-2"
+                            text
+                            @click="reserve"
+                            >
+                            Lihat Lokasi
+                            </v-btn>
+                        </v-card-actions>
+                        </v-card>
+                    </template>
+                    
+                </div>
+
+                <div class="col-4">
+                    <template>
+                        <v-card
+                        :loading="loading"
+                        class="mx-auto my-12"
+                        max-width="374"
+                        >
+                        <v-img
+                            height="250"
+                            src="img/pantaiselatan.jpg"
+                        ></v-img>
+                    
+                        <v-card-title>Pantai Selatan</v-card-title>
+                    
+                        <v-card-text>
+                            <v-row
+                            align="center"
+                            class="mx-0"
+                            >
+                            <v-rating
+                                :value="4"
+                                color="amber"
+                                dense
+                                half-increments
+                                readonly
+                                size="14"
+                            ></v-rating>
+                    
+                            <div class="grey--text ml-4">4 (213)</div>
+                            </v-row>
+                    
+                            <div class="my-4 subtitle-1">
+                                • Pantai Selatan, Yogyakarta 
+                            </div>
+                    
+                            <div>Salah satu pantai di selatan pulau jawa, berada di Daerah Istimewa Yogyakarta.</div>
+                        </v-card-text>
+                    
+                        <v-divider class="mx-4"></v-divider>
+                    
+                        <v-card-title>Berikan rating untuk foto ini</v-card-title>
+                    
+                        <v-card-text>
+                            <v-chip-group
+                            v-model="selection"
+                            active-class="deep-purple accent-4 white--text"
+                            column
+                            >
+                            <v-chip>Bintang 1</v-chip>
+                    
+                            <v-chip>Bintang 2</v-chip>
+                    
+                            <v-chip>Bintang 3</v-chip>
+                    
+                            <v-chip>Bintang 4</v-chip>
+
+                            <v-chip>Bintang 5</v-chip>
+                            </v-chip-group>
+                        </v-card-text>
+                    
+                        <v-card-actions>
+                            <v-btn
+                            color="deep-purple lighten-2"
+                            text
+                            @click="reserve"
+                            >
+                            Lihat Lokasi
+                            </v-btn>
+                        </v-card-actions>
+                        </v-card>
+                    </template>
+                    
+                </div>
+
+                <div class="col-4">
+                    <template>
+                        <v-card
+                        :loading="loading"
+                        class="mx-auto my-12"
+                        max-width="374"
+                        >
+                        <v-img
+                            height="250"
+                            src="img/kebunteh.jpg"
+                        ></v-img>
+                    
+                        <v-card-title>Kebun Teh</v-card-title>
+                    
+                        <v-card-text>
+                            <v-row
+                            align="center"
+                            class="mx-0"
+                            >
+                            <v-rating
+                                :value="3"
+                                color="amber"
+                                dense
+                                half-increments
+                                readonly
+                                size="14"
+                            ></v-rating>
+                    
+                            <div class="grey--text ml-4">3 (80)</div>
+                            </v-row>
+                    
+                            <div class="my-4 subtitle-1">
+                                • Ngargoyoso, Jawa Tengah
+                            </div>
+                    
+                            <div>Daerah dataran tinggi yang berada di kaki gunung Lawu.</div>
+                        </v-card-text>
+                    
+                        <v-divider class="mx-4"></v-divider>
+                    
+                        <v-card-title>Berikan rating untuk foto ini</v-card-title>
+                    
+                        <v-card-text>
+                            <v-chip-group
+                            v-model="selection"
+                            active-class="deep-purple accent-4 white--text"
+                            column
+                            >
+                            <v-chip>Bintang 1</v-chip>
+                    
+                            <v-chip>Bintang 2</v-chip>
+                    
+                            <v-chip>Bintang 3</v-chip>
+                    
+                            <v-chip>Bintang 4</v-chip>
+
+                            <v-chip>Bintang 5</v-chip>
+                            </v-chip-group>
+                        </v-card-text>
+                    
+                        <v-card-actions>
+                            <v-btn
+                            color="deep-purple lighten-2"
+                            text
+                            @click="reserve"
+                            >
+                            Lihat Lokasi
+                            </v-btn>
+                        </v-card-actions>
+                        </v-card>
+                    </template>
+                    
+                </div>
+            </div>
+            <div class="blue-grey lighten-4 font-weight-medium text-center">
+              <p > Terimakasih untuk melihat portfolio album foto saya, untuk melihat lebih banyak silahkan hubungi : <br> IG : filmwira_ <br> Jika ada kritik dan saran, mohon diklik Dibawah ini</p>
+              <template>
+                <v-row justify="center">
+                  <v-dialog v-model="dialog" persistent max-width="600px">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn
+                        color="primary"
+                        dark
+                        v-bind="attrs"
+                        v-on="on"
+                      >
+                        Dibawah ini
+                      </v-btn>
+                    </template>
+                    <v-card>
+                      <v-card-title>
+                        <span class="headline">User Profile</span>
+                      </v-card-title>
+                      <v-card-text>
+                        <v-container>
+                          <v-row>
+                            <v-col cols="12" sm="6" md="4">
+                              <v-text-field label="Nama Lengkap" required></v-text-field>
+                            </v-col>
+                            <v-col cols="12" sm="6" md="4">
+                              <v-text-field label="Kota Asal"></v-text-field>
+                            </v-col>
+                            <v-col cols="12" sm="6" md="4">
+                              <v-text-field
+                                label="Usia"
+                                persistent-hint
+                                required
+                              ></v-text-field>
+                            </v-col>
+                            <v-col cols="12">
+                              <v-text-field label="Kritik" required></v-text-field>
+                            </v-col>
+                            <v-col cols="12">
+                              <v-text-field label="Saran" required></v-text-field>
+                            </v-col>
+                          </v-row>
+                        </v-container>
+                      </v-card-text>
+                      <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
+                        <v-btn color="blue darken-1" text @click="dialog = false">Save</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </v-dialog>
+                </v-row>
+              </template>
+              
+              <script>
+                export default {
+                  data: () => ({
+                    dialog: false,
+                  }),
+                }
+              </script>
+            </div>
+            
+      </v-content>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <!-- Script saya -->
+  
+  <!-- Selesai Script saya -->
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+  </script>
+</body>
+</html>

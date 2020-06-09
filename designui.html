@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-content>
+        <v-container>
+          <nav>
+            <v-toolbar flat app>
+            </v-toolbar-tittle href="index.html">
+                <span class="font-weight-light">Rizky</span>
+                <span>Wira</span>
+            </v-toolbar-tittle>
+            <p class="text-center">Tel-U</p>
+            <v-spacer></v-spacer>
+            <v-btn href="index.html" flat color="white">
+              <span>My Album</span>
+            </v-btn>
+            <v-btn href="tentangsaya.html" flat color="white">
+                <span>About Me</span>
+            </v-btn>
+            </v-toolbar>
+          </nav>
+          <!-- Main -->
+          <div class="row">
+            <div class="col-4">
+                <template>
+                  <v-card
+                    max-width="344"
+                    class="mx-auto"
+                  >
+                    <v-list-item>
+                      <v-list-item-content>
+                        <v-list-item-title class="headline">UI Travel App</v-list-item-title>
+                        <v-list-item-subtitle>by Rizky Wira</v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                
+                    <v-img
+                      src="img/UI_Travel_MobileApp_IpX.jpg"
+                      height="194"
+                    ></v-img>
+                
+                    <v-card-text>
+                      This is Travel App design, with this application, users can get information about popular or top destinations in Lombok with facilities around it, users can also book hotels, cafes, and other facilities.
+                    </v-card-text>
+                
+                    <v-card-actions>
+                      <v-btn
+                        text
+                        color="deep-purple accent-4"
+                      >
+                        Read
+                      </v-btn>
+                  
+                      <v-spacer></v-spacer>
+                      <v-btn icon>
+                        <v-icon>mdi-heart</v-icon>
+                      </v-btn>
+                      <v-btn icon>
+                        <v-icon>mdi-share-variant</v-icon>
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </template>
+            </div>
+
+            <div class="col-4">
+              <template>
+                <v-card
+                  max-width="344"
+                  class="mx-auto"
+                >
+                  <v-list-item>
+                    <v-list-item-content>
+                      <v-list-item-title class="headline">Drone Delivery App</v-list-item-title>
+                      <v-list-item-subtitle>by Rizky Wira</v-list-item-subtitle>
+                    </v-list-item-content>
+                  </v-list-item>
+              
+                  <v-img
+                    src="img/Frame 3.jpg"
+                    height="194"
+                  ></v-img>
+              
+                  <v-card-text>
+                    This is Drone Delivery App, namely DronePack, user can send the items and ordering food with Drone. the advantage of drones from public vehicles is barrier-free drones such as traffic jams, traffic lights etc.
+                  </v-card-text>
+              
+                  <v-card-actions>
+                    <v-btn
+                      text
+                      color="deep-purple accent-4"
+                    >
+                      Read
+                    </v-btn>
+                    
+                    <v-spacer></v-spacer>
+                    <v-btn icon>
+                      <v-icon>mdi-heart</v-icon>
+                    </v-btn>
+                    <v-btn icon>
+                      <v-icon>mdi-share-variant</v-icon>
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </template>
+          </div>
+
+
+            <div class="col-4">
+              <template>
+                <v-card
+                  max-width="344"
+                  class="mx-auto"
+                >
+                  <v-list-item>
+                    <v-list-item-content>
+                      <v-list-item-title class="headline">Clothing Shop App</v-list-item-title>
+                      <v-list-item-subtitle>by Rizky Wira</v-list-item-subtitle>
+                    </v-list-item-content>
+                  </v-list-item>
+              
+                  <v-img
+                    src="img/Clothink2.jpg"
+                    height="194"
+                  ></v-img>
+              
+                  <v-card-text>
+                    This is the Clothing Shop App, which is Clothink,
+                    this application contains all the major clothing indonesian users can buy all clothink products, users will get information about discounts in this application. Users can buy clothes as desired.
+                  </v-card-text>
+              
+                  <v-card-actions>
+                    <v-btn
+                      text
+                      color="deep-purple accent-4"
+                    >
+                      Read
+                    </v-btn>
+
+                    <v-spacer></v-spacer>
+                    <v-btn icon>
+                      <v-icon>mdi-heart</v-icon>
+                    </v-btn>
+                    <v-btn icon>
+                      <v-icon>mdi-share-variant</v-icon>
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </template>
+          </div>
+          </div>
+        </v-container>
+      </v-content>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+    })
+  </script>
+</body>
+</html>
